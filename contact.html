@@ -95,7 +95,7 @@
 
   <link rel="icon" type="image/png" href="assets/img/logo.png">
   <link rel="apple-touch-icon" href="assets/img/logo.png">
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=2" />
 </head>
 <body>
   <header class="topbar">
@@ -114,8 +114,6 @@
           <div class="navDropdownMenu" role="menu">
             <a href="welcome.html" role="menuitem">Principal's Welcome</a>
             <a href="chairs-message.html" role="menuitem">Message from the Chair</a>
-            <a href="meet-the-staff.html" role="menuitem">Meet the Staff</a>
-            <a href="governors.html" role="menuitem">Governors</a>
             <div class="dropdownDivider"></div>
             <a href="about.html#meet-the-team" role="menuitem">Meet the Team</a>
             <a href="about.html#mission" role="menuitem">Our Mission</a>
@@ -124,7 +122,6 @@
           </div>
         </div>
         <a href="curriculum.html">Curriculum</a>
-        <a href="achievements.html">Achievements</a>
         <a href="contact.html" aria-current="page">Contact</a>
       </nav>
 
@@ -245,7 +242,7 @@
             <div class="listItem">
               <b>Email:</b>
               <div style="color:var(--muted);line-height:1.6;">
-                <a href="mailto:info@blueinkschoolinternational.org">info@blueinkschoolinternational.org</a>
+                <a href="/cdn-cgi/l/email-protection#9ef7f0f8f1defcf2ebfbf7f0f5edfdf6f1f1f2f7f0eafbecf0ffeaf7f1f0fff2b0f1ecf9"><span class="__cf_email__" data-cfemail="5a33343c351a38362f3f33343129393235353633342e3f28343b2e3335343b367435283d">[email&#160;protected]</span></a>
               </div>
             </div>
 
@@ -324,7 +321,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="assets/js/main.js?v=2"></script>
   <script>
     const form = document.getElementById("contactForm");
     const status = document.getElementById("formStatus");
@@ -351,11 +348,4 @@
 
         if (response.ok) {
           form.reset();
-          status.textContent = "";
-          successMessage.style.display = "block";
-        } else {
-          const data = await response.json();
-          if (data.errors) {
-            status.textContent = data.errors.map(error => error.message).join(", ");
-          } else {
-            status
+          status.textCon
