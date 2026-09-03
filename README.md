@@ -53,4 +53,4 @@ Each question is an entry in a level's data file, carrying its own image, answer
 
 ## 👤 Author
 
-Built and maintained by **Musab** — [LinkedIn]((https://www.linkedin.com/in/musab-akhtar/)) 
+Built and maintained by **Musab** — [LinkedIn](https://www.linkedin.com/in/musab-akhtar/) 
