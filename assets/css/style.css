@@ -460,7 +460,7 @@ p{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(0deg, rgba(7,18,37,.48), rgba(7,18,37,.20));
+  background:linear-gradient(0deg, rgba(7,18,37,.15), transparent);
   z-index:2;
   pointer-events:none;
 }
@@ -533,31 +533,31 @@ p{
 
 .contactBanner{
   background:
-    linear-gradient(rgba(7,18,37,.5), rgba(7,18,37,.5)),
+    linear-gradient(rgba(7,18,37,.3), rgba(7,18,37,.3)),
     url("../img/contact-banner.jpg") center/cover no-repeat;
 }
 
 .aboutBanner{
   background:
-    linear-gradient(rgba(7,18,37,.5), rgba(7,18,37,.5)),
+    linear-gradient(rgba(7,18,37,.3), rgba(7,18,37,.3)),
     url("../img/about-banner.jpg") center/cover no-repeat;
 }
 
 .Curriculum{
   background:
-    linear-gradient(rgba(7,18,37,.5), rgba(7,18,37,.5)),
+    linear-gradient(rgba(7,18,37,.3), rgba(7,18,37,.3)),
     url("../img/Curriculum.jpg") center/cover no-repeat;
 }
 
 .welcomeBanner{
   background:
-    linear-gradient(rgba(7,18,37,.7), rgba(7,18,37,.7)),
+    linear-gradient(rgba(7,18,37,.4), rgba(7,18,37,.4)),
     url("../img/welcome-banner.jpg") center/cover no-repeat;
 }
 
 .chairBanner{
   background:
-    linear-gradient(rgba(7,18,37,.7), rgba(7,18,37,.7)),
+    linear-gradient(rgba(7,18,37,.4), rgba(7,18,37,.4)),
     url("../img/chair-banner.jpg") bottom/cover no-repeat;
 }
 
@@ -1303,7 +1303,7 @@ textarea{
 
 .staffBanner{
   background:
-    linear-gradient(rgba(7,18,37,.55), rgba(7,18,37,.55)),
+    linear-gradient(rgba(7,18,37,.3), rgba(7,18,37,.3)),
     url("../img/contact-banner.jpg") center/cover no-repeat;
 }
 
@@ -1475,7 +1475,7 @@ textarea{
 
 .governorsBanner{
   background:
-    linear-gradient(rgba(7,18,37,.55), rgba(7,18,37,.55)),
+    linear-gradient(rgba(7,18,37,.3), rgba(7,18,37,.3)),
     url("../img/governors.jpg") center/cover no-repeat;
 }
 
@@ -1485,7 +1485,7 @@ textarea{
 
 .achievementsBanner{
   background:
-    linear-gradient(rgba(7,18,37,.55), rgba(7,18,37,.55)),
+    linear-gradient(rgba(7,18,37,.3), rgba(7,18,37,.3)),
     url("../img/achievements-banner.jpg") center 30%/cover no-repeat;
 }
 
@@ -1690,7 +1690,7 @@ textarea{
 
 .latestNewsBanner{
   background:
-    linear-gradient(rgba(7,18,37,.55), rgba(7,18,37,.55)),
+    linear-gradient(rgba(7,18,37,.3), rgba(7,18,37,.3)),
     url("../img/hero1.jpg") center/cover no-repeat;
 }
 
@@ -1700,7 +1700,7 @@ textarea{
 
 .careersBanner{
   background:
-    linear-gradient(rgba(7,18,37,.55), rgba(7,18,37,.55)),
+    linear-gradient(rgba(7,18,37,.3), rgba(7,18,37,.3)),
     url("../img/hero1.jpg") center/cover no-repeat;
 }
 /* =========================
