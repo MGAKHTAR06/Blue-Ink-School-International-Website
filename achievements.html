@@ -2,108 +2,516 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Blue Ink School International | Achievements</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Student Achievements | Blue Ink School International</title>
+
+  <!-- Primary SEO Meta -->
+  <meta name="description" content="Celebrating the academic achievements of students at Blue Ink School International. View class toppers, exam results, and outstanding student performance across all 16 classes." />
+  <meta name="keywords" content="Blue Ink School International achievements, class toppers, student results, exam performance, academic excellence, top students, school awards" />
+  <meta name="author" content="Blue Ink School International" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.blueinkschoolinternational.com/achievements.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Student Achievements | Blue Ink School International" />
+  <meta property="og:description" content="Celebrating the academic achievements of students at Blue Ink School International — class toppers and outstanding exam results across all 16 classes." />
+  <meta property="og:url" content="https://www.blueinkschoolinternational.com/achievements.html" />
+  <meta property="og:site_name" content="Blue Ink School International" />
+  <meta property="og:image" content="https://www.blueinkschoolinternational.com/assets/img/hero1.jpg" />
+  <meta property="og:image:alt" content="Student Achievements at Blue Ink School International" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Student Achievements | Blue Ink School International" />
+  <meta name="twitter:description" content="Celebrating the academic achievements of students at Blue Ink School International." />
+  <meta name="twitter:image" content="https://www.blueinkschoolinternational.com/assets/img/hero1.jpg" />
+  <meta name="twitter:image:alt" content="Student Achievements at Blue Ink School International" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Student Achievements — Blue Ink School International",
+    "url": "https://www.blueinkschoolinternational.com/achievements.html",
+    "description": "Celebrating the academic achievements of students at Blue Ink School International.",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.blueinkschoolinternational.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Achievements", "item": "https://www.blueinkschoolinternational.com/achievements.html" }
+      ]
+    }
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <link rel="apple-touch-icon" href="assets/img/logo.png">
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <header class="topbar">
     <div class="container nav" data-nav>
-      <a class="brand" href="index.html">
-        <img src="assets/img/logo.png" class="logo">
-                <div>
-          <div style="font-size:16px;font-weight:900;">Blue Ink School International </div>
+      <a class="brand" href="index.html" aria-label="Blue Ink School International Home">
+        <img src="assets/img/logo.png" class="logo" alt="Blue Ink School International logo">
+        <div>
+          <div style="font-size:16px;font-weight:900;">Blue Ink School International</div>
         </div>
       </a>
-
-
-      <nav class="links" data-nav-links>
+                  <nav class="links" data-nav-links aria-label="Primary navigation">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <div class="navDropdown">
+          <a href="about.html" class="navDropdownToggle" aria-haspopup="true" aria-expanded="false">About &#9662;</a>
+          <div class="navDropdownMenu" role="menu">
+            <a href="welcome.html" role="menuitem">Principal's Welcome</a>
+            <a href="chairs-message.html" role="menuitem">Message from the Chair</a>
+            <a href="meet-the-staff.html" role="menuitem">Meet the Staff</a>
+            <a href="governors.html" role="menuitem">Governors</a>
+            <div class="dropdownDivider"></div>
+            <a href="about.html#meet-the-team" role="menuitem">Meet the Team</a>
+            <a href="about.html#mission" role="menuitem">Our Mission</a>
+            <a href="about.html#facilities" role="menuitem">Our Facilities</a>
+            <a href="about.html#pledge" role="menuitem">Our Pledge</a>
+          </div>
+        </div>
         <a href="curriculum.html">Curriculum</a>
-        <a href="achievements.html">Achievements</a>
+        <a href="achievements.html" aria-current="page">Achievements</a>
         <a href="contact.html">Contact</a>
       </nav>
-
       <div class="cta">
-        <a class="btn primary" href="contact.html">Admissions Enquiry</a>
         <button class="menuBtn" aria-label="Open menu" data-menu-btn>☰</button>
       </div>
     </div>
   </header>
 
-  <main class="container">
-    <section class="pageHeader">
-      <h1>Student achievements</h1>
-      <p>
-        Celebrating academic progress, competitions, leadership, sports, and community service.
-        Replace these examples with real highlights.
-      </p>
-    </section>
+  <main id="main-content">
 
-    <section class="section">
-      <div class="grid3">
-        <div class="card">
-          <span class="badge">Academic</span>
-          <h3>Top performers</h3>
-          <p>Recognition for exceptional progress and consistent excellence.</p>
-        </div>
-        <div class="card">
-          <span class="badge">STEM</span>
-          <h3>Science fair awards</h3>
-          <p>Projects demonstrating innovation, research skills, and presentation excellence.</p>
-        </div>
-        <div class="card">
-          <span class="badge">Sport</span>
-          <h3>Inter-school champions</h3>
-          <p>Teamwork, discipline, and achievement across tournaments.</p>
-        </div>
+    <!-- CLASSES STRIP -->
+    <div class="classesBanner" role="banner" aria-label="Classes offered">
+      <div class="container">
+        <span class="classesBannerInner">
+          <span class="classesDot"></span>
+          Now Enrolling: <strong>NKG to Class 11</strong> — CBSE Syllabus
+          <span class="classesSep">•</span>
+          <a href="news-admissions.html" class="classesBannerLink">Apply Now →</a>
+        </span>
+      </div>
+    </div>
+
+
+
+    <section class="pageBanner achievementsBanner" aria-labelledby="achievements-banner-heading">
+      <div class="bannerOverlay">
+        <h1 id="achievements-banner-heading">Student Achievements</h1>
+        <p>Celebrating excellence, effort, and outstanding results.</p>
       </div>
     </section>
 
-    <section class="section split">
-      <div class="card">
-        <h3>Achievement timeline</h3>
-        <div class="list">
-          <div class="listItem">
-            <b>January</b>
-            <div style="color:var(--muted);line-height:1.6;">Debate competition participation and awards.</div>
-          </div>
-          <div class="listItem">
-            <b>March</b>
-            <div style="color:var(--muted);line-height:1.6;">STEM week showcase: coding and robotics.</div>
-          </div>
-          <div class="listItem">
-            <b>June</b>
-            <div style="color:var(--muted);line-height:1.6;">Sports day: athletics and team events.</div>
-          </div>
+    <section class="section" aria-labelledby="achievements-intro-heading">
+      <div class="container">
+        <div class="sectionTitle">
+          <h2 id="achievements-intro-heading">Class Toppers</h2>
+          <div class="hint">Top three students from each class by exam result</div>
         </div>
-      </div>
-
-      <div class="card">
-        <h3>Get featured</h3>
-        <p>
-          Want a student achievement added here? Send details (name, year group, achievement, date, photo permission).
+        <p style="max-width:800px;">
+          We are proud to celebrate the hard work and dedication of our students.
+          Below are the top three performers from each class, recognised for their
+          outstanding exam results and commitment to academic excellence.
         </p>
-        <a class="btn primary" href="contact.html">Submit an achievement</a>
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="container footerGrid">
-        <div>
-          <div style="font-weight:900;">Blue Ink School International</div>
-          <div style="margin-top:8px;">© <span id="year"></span> All rights reserved.</div>
-        </div>
-        <div style="text-align:right;">
-          <div><a href="contact.html">Contact</a> • <a href="curriculum.html">Curriculum</a></div>
-          <div style="margin-top:8px;">Designed in the Blue Ink theme</div>
+    <section class="section" aria-label="Class topper results">
+      <div class="container">
+        <div class="achievementsGrid">
+
+          <!-- ── NKG ── -->
+          <div class="classBlock">
+            <div class="classBlockHeader"><h2 class="classTitle">NKG</h2></div>
+            <div class="toppersRow">
+              <div class="topperCard pos-2">
+                <div class="positionBadge">2<span>nd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/nkg-2.jpg" alt="2nd position student - Mayra" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Mayra</div><div class="topperPercent">92.00%</div></div>
+              </div>
+              <div class="topperCard pos-1">
+                <div class="positionBadge gold">1<span>st</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/nkg-1.jpg" alt="1st position student - Arshiya" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Arshiya</div><div class="topperPercent">94.83%</div></div>
+              </div>
+              <div class="topperCard pos-3">
+                <div class="positionBadge bronze">3<span>rd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/nkg-3.jpg" alt="3rd position student - Sakshi" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Sakshi</div><div class="topperPercent">90.83%</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── LKG ── -->
+          <div class="classBlock">
+            <div class="classBlockHeader"><h2 class="classTitle">LKG</h2></div>
+            <div class="toppersRow">
+              <div class="topperCard pos-2">
+                <div class="positionBadge">2<span>nd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/lkg-2.jpg" alt="2nd position student - Supriya" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Supriya</div><div class="topperPercent">93.66%</div></div>
+              </div>
+              <div class="topperCard pos-1">
+                <div class="positionBadge gold">1<span>st</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/lkg-1.jpg" alt="1st position student - Arman Khan" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Arman Khan</div><div class="topperPercent">97.16%</div></div>
+              </div>
+              <div class="topperCard pos-3">
+                <div class="positionBadge bronze">3<span>rd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/lkg-3.jpg" alt="3rd position student - Nuzhat Khatoon" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Nuzhat Khatoon</div><div class="topperPercent">91.00%</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── UKG ── -->
+          <div class="classBlock">
+            <div class="classBlockHeader"><h2 class="classTitle">UKG</h2></div>
+            <div class="toppersRow">
+              <div class="topperCard pos-2">
+                <div class="positionBadge">2<span>nd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/ukg-2.jpg" alt="2nd position student - Arman" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Arman</div><div class="topperPercent">92.50%</div></div>
+              </div>
+              <div class="topperCard pos-1">
+                <div class="positionBadge gold">1<span>st</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/ukg-1.jpg" alt="1st position student - Ashmeer Ahmad" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Ashmeer Ahmad</div><div class="topperPercent">92.66%</div></div>
+              </div>
+              <div class="topperCard pos-3">
+                <div class="positionBadge bronze">3<span>rd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/ukg-3.jpg" alt="3rd position student - Ananya Prajapati" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Ananya Prajapati</div><div class="topperPercent">91.83%</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Class 1 (A) ── -->
+          <div class="classBlock">
+            <div class="classBlockHeader"><h2 class="classTitle">Class 1 (A)</h2></div>
+            <div class="toppersRow">
+              <div class="topperCard pos-2">
+                <div class="positionBadge">2<span>nd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-1-a-2.jpg" alt="2nd position student - Rokaiya Anjum" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Rokaiya Anjum</div><div class="topperPercent">91.00%</div></div>
+              </div>
+              <div class="topperCard pos-1">
+                <div class="positionBadge gold">1<span>st</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-1-a-1.jpg" alt="1st position student - Muhammad Saqib" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Muhammad Saqib</div><div class="topperPercent">91.42%</div></div>
+              </div>
+              <div class="topperCard pos-3">
+                <div class="positionBadge bronze">3<span>rd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-1-a-3.jpg" alt="3rd position student - Abdul Ilah" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Abdul Ilah</div><div class="topperPercent">89.42%</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Class 1 (B) ── -->
+          <div class="classBlock">
+            <div class="classBlockHeader"><h2 class="classTitle">Class 1 (B)</h2></div>
+            <div class="toppersRow">
+              <div class="topperCard pos-2">
+                <div class="positionBadge">2<span>nd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-1-b-2.jpg" alt="2nd position student - Sara Khan" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Sara Khan</div><div class="topperPercent">72.14%</div></div>
+              </div>
+              <div class="topperCard pos-1">
+                <div class="positionBadge gold">1<span>st</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-1-b-1.jpg" alt="1st position student - Alishba Khan" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Alishba Khan</div><div class="topperPercent">74.14%</div></div>
+              </div>
+              <div class="topperCard pos-3">
+                <div class="positionBadge bronze">3<span>rd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-1-b-3.jpg" alt="3rd position student - Yaseen Tahir" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Yaseen Tahir</div><div class="topperPercent">69.00%</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Class 2 (A) ── -->
+          <div class="classBlock">
+            <div class="classBlockHeader"><h2 class="classTitle">Class 2 (A)</h2></div>
+            <div class="toppersRow">
+              <div class="topperCard pos-2">
+                <div class="positionBadge">2<span>nd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-2-a-2.jpg" alt="2nd position student - Falak" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Falak</div><div class="topperPercent">90.42%</div></div>
+              </div>
+              <div class="topperCard pos-1">
+                <div class="positionBadge gold">1<span>st</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-2-a-1.jpg" alt="1st position student - Aaliya Khatoon" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Aaliya Khatoon</div><div class="topperPercent">95.71%</div></div>
+              </div>
+              <div class="topperCard pos-3">
+                <div class="positionBadge bronze">3<span>rd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-2-a-3.jpg" alt="3rd position student - Ansh Gupta" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Ansh Gupta</div><div class="topperPercent">74.14%</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Class 2 (B) ── -->
+          <div class="classBlock">
+            <div class="classBlockHeader"><h2 class="classTitle">Class 2 (B)</h2></div>
+            <div class="toppersRow">
+              <div class="topperCard pos-2">
+                <div class="positionBadge">2<span>nd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-2-b-2.jpg" alt="2nd position student - Shagufa" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Shagufa</div><div class="topperPercent">72.00%</div></div>
+              </div>
+              <div class="topperCard pos-1">
+                <div class="positionBadge gold">1<span>st</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-2-b-1.jpg" alt="1st position student - Inaya Khan" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Inaya Khan</div><div class="topperPercent">84.28%</div></div>
+              </div>
+              <div class="topperCard pos-3">
+                <div class="positionBadge bronze">3<span>rd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-2-b-3.jpg" alt="3rd position student - Saksham" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Saksham</div><div class="topperPercent">67.85%</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Class 3 (A) ── -->
+          <div class="classBlock">
+            <div class="classBlockHeader"><h2 class="classTitle">Class 3 (A)</h2></div>
+            <div class="toppersRow">
+              <div class="topperCard pos-2">
+                <div class="positionBadge">2<span>nd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-3-a-2.jpg" alt="2nd position student - Anshika Chaudhary" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Anshika Chaudhary</div><div class="topperPercent">89.44%</div></div>
+              </div>
+              <div class="topperCard pos-1">
+                <div class="positionBadge gold">1<span>st</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-3-a-1.jpg" alt="1st position student - Muhammad Muazzam Khan" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Muhammad Muazzam Khan</div><div class="topperPercent">94.33%</div></div>
+              </div>
+              <div class="topperCard pos-3">
+                <div class="positionBadge bronze">3<span>rd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-3-a-3.jpg" alt="3rd position student - Mariya Khatoon" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Mariya Khatoon</div><div class="topperPercent">69.22%</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Class 3 (B) ── -->
+          <div class="classBlock">
+            <div class="classBlockHeader"><h2 class="classTitle">Class 3 (B)</h2></div>
+            <div class="toppersRow">
+              <div class="topperCard pos-2">
+                <div class="positionBadge">2<span>nd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-3-b-2.jpg" alt="2nd position student - Dheeraj Gaud" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Dheeraj Gaud</div><div class="topperPercent">73.88%</div></div>
+              </div>
+              <div class="topperCard pos-1">
+                <div class="positionBadge gold">1<span>st</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-3-b-1.jpg" alt="1st position student - Iqra Iram" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Iqra Iram</div><div class="topperPercent">85.11%</div></div>
+              </div>
+              <div class="topperCard pos-3">
+                <div class="positionBadge bronze">3<span>rd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-3-b-3.jpg" alt="3rd position student - Anmol Jaiswal" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Anmol Jaiswal</div><div class="topperPercent">73.22%</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Class 4 (A) ── -->
+          <div class="classBlock">
+            <div class="classBlockHeader"><h2 class="classTitle">Class 4 (A)</h2></div>
+            <div class="toppersRow">
+              <div class="topperCard pos-2">
+                <div class="positionBadge">2<span>nd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-4-a-2.jpg" alt="2nd position student - Adnan" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Adnan</div><div class="topperPercent">82.33%</div></div>
+              </div>
+              <div class="topperCard pos-1">
+                <div class="positionBadge gold">1<span>st</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-4-a-1.jpg" alt="1st position student - Bushra" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Bushra</div><div class="topperPercent">89.00%</div></div>
+              </div>
+              <div class="topperCard pos-3">
+                <div class="positionBadge bronze">3<span>rd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-4-a-3.jpg" alt="3rd position student - Muhammad Sarim" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Muhammad Sarim</div><div class="topperPercent">82.22%</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Class 4 (B) ── -->
+          <div class="classBlock">
+            <div class="classBlockHeader"><h2 class="classTitle">Class 4 (B)</h2></div>
+            <div class="toppersRow">
+              <div class="topperCard pos-2">
+                <div class="positionBadge">2<span>nd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-4-b-2.jpg" alt="2nd position student - Istikhar" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Istikhar</div><div class="topperPercent">88.88%</div></div>
+              </div>
+              <div class="topperCard pos-1">
+                <div class="positionBadge gold">1<span>st</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-4-b-1.jpg" alt="1st position student - Saurabh" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Saurabh</div><div class="topperPercent">92.22%</div></div>
+              </div>
+              <div class="topperCard pos-3">
+                <div class="positionBadge bronze">3<span>rd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-4-b-3.jpg" alt="3rd position student - Afifa" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Afifa</div><div class="topperPercent">87.33%</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Class 5 ── -->
+          <div class="classBlock">
+            <div class="classBlockHeader"><h2 class="classTitle">Class 5</h2></div>
+            <div class="toppersRow">
+              <div class="topperCard pos-2">
+                <div class="positionBadge">2<span>nd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-5-2.jpg" alt="2nd position student - Anas Khan" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Anas Khan</div><div class="topperPercent">79.22%</div></div>
+              </div>
+              <div class="topperCard pos-1">
+                <div class="positionBadge gold">1<span>st</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-5-1.jpg" alt="1st position student - Radha Jaiswal" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Radha Jaiswal</div><div class="topperPercent">87.44%</div></div>
+              </div>
+              <div class="topperCard pos-3">
+                <div class="positionBadge bronze">3<span>rd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-5-3.jpg" alt="3rd position student - Aayesha Tanjeem" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Aayesha Tanjeem</div><div class="topperPercent">79.11%</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Class 6 ── -->
+          <div class="classBlock">
+            <div class="classBlockHeader"><h2 class="classTitle">Class 6</h2></div>
+            <div class="toppersRow">
+              <div class="topperCard pos-2">
+                <div class="positionBadge">2<span>nd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-6-2.jpg" alt="2nd position student - Namra Iram" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Namra Iram</div><div class="topperPercent">88.87%</div></div>
+              </div>
+              <div class="topperCard pos-1">
+                <div class="positionBadge gold">1<span>st</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-6-1.jpg" alt="1st position student - Hemlata Patel" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Hemlata Patel</div><div class="topperPercent">92.00%</div></div>
+              </div>
+              <div class="topperCard pos-3">
+                <div class="positionBadge bronze">3<span>rd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-6-3.jpg" alt="3rd position student - Shubham Vishwakarma" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Shubham Vishwakarma</div><div class="topperPercent">80.62%</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Class 7 ── -->
+          <div class="classBlock">
+            <div class="classBlockHeader"><h2 class="classTitle">Class 7</h2></div>
+            <div class="toppersRow">
+              <div class="topperCard pos-2">
+                <div class="positionBadge">2<span>nd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-7-2.jpg" alt="2nd position student - Haleema Khatoon" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Haleema Khatoon</div><div class="topperPercent">89.88%</div></div>
+              </div>
+              <div class="topperCard pos-1">
+                <div class="positionBadge gold">1<span>st</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-7-1.jpg" alt="1st position student - Sahiba" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Sahiba</div><div class="topperPercent">90.63%</div></div>
+              </div>
+              <div class="topperCard pos-3">
+                <div class="positionBadge bronze">3<span>rd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-7-3.jpg" alt="3rd position student - Sahil" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Sahil</div><div class="topperPercent">86.75%</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Class 8 ── -->
+          <div class="classBlock">
+            <div class="classBlockHeader"><h2 class="classTitle">Class 8</h2></div>
+            <div class="toppersRow">
+              <div class="topperCard pos-2">
+                <div class="positionBadge">2<span>nd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-8-2.jpg" alt="2nd position student - Shreya Singh Yadav" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Shreya Singh Yadav</div><div class="topperPercent">91.50%</div></div>
+              </div>
+              <div class="topperCard pos-1">
+                <div class="positionBadge gold">1<span>st</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-8-1.jpg" alt="1st position student - Shivam Vishwakarma" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Shivam Vishwakarma</div><div class="topperPercent">92.50%</div></div>
+              </div>
+              <div class="topperCard pos-3">
+                <div class="positionBadge bronze">3<span>rd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-8-3.jpg" alt="3rd position student - Saurabh Singh Yadav" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Saurabh Singh Yadav</div><div class="topperPercent">88.62%</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Class 9 ── -->
+          <div class="classBlock">
+            <div class="classBlockHeader"><h2 class="classTitle">Class 9</h2></div>
+            <div class="toppersRow">
+              <div class="topperCard pos-2">
+                <div class="positionBadge">2<span>nd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-9-2.jpg" alt="2nd position student - Manish Yadav" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Manish Yadav</div><div class="topperPercent">79.25%</div></div>
+              </div>
+              <div class="topperCard pos-1">
+                <div class="positionBadge gold">1<span>st</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-9-1.jpg" alt="1st position student - Mahvish" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Mahvish</div><div class="topperPercent">82.17%</div></div>
+              </div>
+              <div class="topperCard pos-3">
+                <div class="positionBadge bronze">3<span>rd</span></div>
+                <div class="topperPhoto"><img src="assets/img/achievements/class-9-3.jpg" alt="3rd position student - Nidhi Jaiswal" loading="lazy"></div>
+                <div class="topperInfo"><div class="topperName">Nidhi Jaiswal</div><div class="topperPercent">77.83%</div></div>
+              </div>
+            </div>
+          </div>
+
+
         </div>
       </div>
-    </footer>
+    </section>
+
   </main>
 
+  <footer class="footer" aria-label="Site footer">
+    <div class="container footerGrid">
+      <div>
+        <div style="font-weight:900;">Blue Ink School International</div>
+        <div style="margin-top:8px;">© 2026 All Rights Reserved</div>
+      </div>
+      <div style="text-align:right;">
+        <nav aria-label="Footer navigation">
+          <a href="index.html">Home</a> •
+          <a href="about.html">About</a> •
+          <a href="curriculum.html">Curriculum</a> •
+          <a href="contact.html">Contact</a> •
+          <a href="latest-news.html">Latest News</a> •
+          <a href="careers.html">Careers</a>
+        </nav>
+        <div style="margin-top:8px;">
+          <a href="https://www.youtube.com/@blueinkschoolinternational" target="_blank" rel="noopener noreferrer" aria-label="Blue Ink School International on YouTube">YouTube</a>
+        </div>
+        <div style="margin-top:8px;">Inspiring the Leaders of Tomorrow</div>
+      </div>
+    </div>
+  </footer>
+
   <script src="assets/js/main.js"></script>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
