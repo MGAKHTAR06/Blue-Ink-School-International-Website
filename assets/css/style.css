@@ -199,8 +199,7 @@ select{
   white-space:nowrap;
 }
 
-.navDropdownToggle:hover,
-.navDropdown:hover .navDropdownToggle{
+.navDropdownToggle:hover{
   background:rgba(234,242,255,.06);
   color:var(--text);
 }
@@ -226,7 +225,6 @@ select{
   backdrop-filter:blur(12px);
 }
 
-.navDropdown:hover .navDropdownMenu,
 .navDropdown.open .navDropdownMenu{
   display:block;
 }
@@ -1704,4 +1702,137 @@ textarea{
   background:
     linear-gradient(rgba(7,18,37,.55), rgba(7,18,37,.55)),
     url("../img/hero1.jpg") center/cover no-repeat;
+}
+/* =========================
+   MOBILE COMFORT IMPROVEMENTS
+   ========================= */
+
+@media (max-width: 480px){
+
+  /* More breathing room around the page */
+  .container{
+    width:min(var(--max), calc(100% - 24px));
+  }
+
+  /* Bigger body text */
+  p{
+    font-size:17px;
+    line-height:1.75;
+  }
+
+  /* More padding inside cards */
+  .card,
+  .heroInner{
+    padding:20px;
+  }
+
+  /* Section spacing */
+  .section{
+    padding:24px 0;
+  }
+
+  /* Bigger h1 tap area and readability */
+  h1{
+    font-size:28px;
+    line-height:1.15;
+  }
+
+  h2{
+    font-size:22px;
+  }
+
+  h3{
+    font-size:18px;
+  }
+
+  /* Buttons — bigger tap targets */
+  .btn{
+    padding:14px 20px;
+    font-size:15px;
+    border-radius:14px;
+  }
+
+  /* Hero section — less top padding */
+  .hero{
+    padding:24px 0 16px;
+  }
+
+  /* Page banner text */
+  .pageBanner h1{
+    font-size:32px;
+  }
+
+  .pageBanner p{
+    font-size:16px;
+  }
+
+  /* News cards — more comfortable */
+  .newsCard{
+    padding:18px;
+    gap:14px;
+  }
+
+  .newsCard h3{
+    font-size:18px;
+  }
+
+  .newsCard img{
+    height:200px;
+  }
+
+  /* Footer — stack and centre */
+  .footerGrid{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .footer nav{
+    justify-content:center;
+  }
+
+  /* Classes banner */
+  .classesBanner{
+    font-size:14px;
+    padding:10px 0;
+  }
+
+  /* Subject cards */
+  .subjectCard{
+    padding:16px;
+  }
+
+  .subjectCard h4{
+    font-size:16px;
+  }
+
+  /* About facility cards — bigger images */
+  .aboutFacilityCard img{
+    height:160px;
+  }
+
+  /* Form fields — easier to type in */
+  input,
+  textarea{
+    padding:14px;
+    font-size:16px;
+  }
+
+  /* Kicker pill */
+  .kicker{
+    font-size:13px;
+  }
+
+  /* Staff cards stack */
+  .staffCard{
+    grid-template-columns:1fr;
+  }
+
+  .staffPhoto{
+    min-height:220px;
+    order:-1;
+  }
+
+  .staffProfile{
+    padding:18px;
+  }
 }
