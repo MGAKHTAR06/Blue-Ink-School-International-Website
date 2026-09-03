@@ -1836,3 +1836,348 @@ textarea{
     padding:18px;
   }
 }
+/* =========================
+   LEARNING HUB PAGE
+   ========================= */
+
+.hub-body{
+  font-family:'Nunito',sans-serif;
+}
+
+.hubHero{
+  background:
+    radial-gradient(800px 400px at 20% 50%, rgba(45,212,255,.18), transparent 60%),
+    radial-gradient(600px 400px at 80% 50%, rgba(96,165,250,.14), transparent 60%),
+    linear-gradient(135deg, #071225 0%, #0a1a35 100%);
+  padding:60px 0 48px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+}
+
+.hubHero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(circle at 15% 30%, rgba(45,212,255,.06) 0%, transparent 40%),
+    radial-gradient(circle at 85% 70%, rgba(96,165,250,.06) 0%, transparent 40%);
+  pointer-events:none;
+}
+
+.hubHeroLabel{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(45,212,255,.12);
+  border:1px solid rgba(45,212,255,.25);
+  border-radius:999px;
+  padding:6px 16px;
+  font-size:13px;
+  font-weight:800;
+  color:var(--brand);
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+
+.hubHeroTitle{
+  font-family:'Fredoka One',cursive;
+  font-size:clamp(36px, 6vw, 64px);
+  font-weight:400;
+  color:#fff;
+  margin:0 0 16px;
+  line-height:1.1;
+  letter-spacing:-.5px;
+}
+
+.hubHeroTitle span{
+  background:linear-gradient(135deg, #2DD4FF, #60A5FA);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+.hubHeroSub{
+  font-size:18px;
+  color:var(--muted);
+  max-width:560px;
+  margin:0 auto 32px;
+  line-height:1.6;
+}
+
+.hubStats{
+  display:inline-flex;
+  gap:32px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.hubStat{
+  text-align:center;
+}
+
+.hubStat strong{
+  display:block;
+  font-family:'Fredoka One',cursive;
+  font-size:28px;
+  color:var(--brand);
+  line-height:1;
+}
+
+.hubStat span{
+  font-size:12px;
+  font-weight:700;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+
+.subjectHub{
+  padding:60px 0 80px;
+}
+
+.hubGrid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:24px;
+}
+
+.subjectCard{
+  position:relative;
+  border-radius:24px;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  display:block;
+  transition:transform .3s ease, box-shadow .3s ease;
+  border:1px solid var(--line);
+  min-height:280px;
+}
+
+.subjectCard:hover{
+  transform:translateY(-8px);
+  box-shadow:0 24px 50px rgba(0,0,0,.4);
+}
+
+.subjectCard:hover .subjectCardArrow{
+  transform:translateX(6px);
+}
+
+.subjectCardBg{
+  position:absolute;
+  inset:0;
+  transition:transform .4s ease;
+}
+
+.subjectCard:hover .subjectCardBg{
+  transform:scale(1.04);
+}
+
+.subjectCardContent{
+  position:relative;
+  z-index:2;
+  padding:32px 28px 28px;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.subjectIcon{
+  font-size:44px;
+  line-height:1;
+  margin-bottom:16px;
+  filter:drop-shadow(0 4px 12px rgba(0,0,0,.3));
+}
+
+.subjectLabel{
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  opacity:.75;
+  margin-bottom:6px;
+}
+
+.subjectName{
+  font-family:'Fredoka One',cursive;
+  font-size:26px;
+  font-weight:400;
+  color:#fff;
+  line-height:1.15;
+  margin:0 0 10px;
+}
+
+.subjectDesc{
+  font-size:14px;
+  line-height:1.6;
+  opacity:.82;
+  margin:0 0 20px;
+  color:#fff;
+}
+
+.subjectBottom{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.subjectTopics{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+
+.subjectTopic{
+  font-size:11px;
+  font-weight:700;
+  padding:4px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.15);
+  color:#fff;
+  backdrop-filter:blur(4px);
+}
+
+.subjectCardArrow{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:rgba(255,255,255,.2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:16px;
+  color:#fff;
+  transition:transform .3s ease;
+  flex-shrink:0;
+}
+
+.card-english .subjectCardBg{
+  background:linear-gradient(135deg, #1e3a5f 0%, #0d2040 50%, #071225 100%);
+}
+.card-english{ border-color:rgba(59,130,246,.35); }
+.card-english .subjectLabel{ color:#93c5fd; }
+
+.card-maths .subjectCardBg{
+  background:linear-gradient(135deg, #1a4731 0%, #0d2d1f 50%, #071225 100%);
+}
+.card-maths{ border-color:rgba(34,197,94,.35); }
+.card-maths .subjectLabel{ color:#86efac; }
+
+.card-nvr .subjectCardBg{
+  background:linear-gradient(135deg, #3b2060 0%, #231244 50%, #071225 100%);
+}
+.card-nvr{ border-color:rgba(168,85,247,.35); }
+.card-nvr .subjectLabel{ color:#d8b4fe; }
+
+.card-vr .subjectCardBg{
+  background:linear-gradient(135deg, #5c2a0e 0%, #3b1a08 50%, #071225 100%);
+}
+.card-vr{ border-color:rgba(251,146,60,.35); }
+.card-vr .subjectLabel{ color:#fdba74; }
+
+.card-spg .subjectCardBg{
+  background:linear-gradient(135deg, #4a1942 0%, #2d0f28 50%, #071225 100%);
+}
+.card-spg{ border-color:rgba(244,114,182,.35); }
+.card-spg .subjectLabel{ color:#f9a8d4; }
+
+.card-coming .subjectCardBg{
+  background:linear-gradient(135deg, #1a2035 0%, #111827 100%);
+}
+.card-coming{
+  border-color:rgba(234,242,255,.08);
+  opacity:.6;
+  cursor:default;
+  pointer-events:none;
+}
+
+.comingSoonBadge{
+  position:absolute;
+  top:16px;
+  right:16px;
+  background:rgba(234,242,255,.1);
+  border:1px solid rgba(234,242,255,.15);
+  border-radius:999px;
+  padding:4px 12px;
+  font-size:11px;
+  font-weight:800;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  z-index:3;
+}
+
+.howItWorks{
+  padding:0 0 80px;
+}
+
+.howGrid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:20px;
+  margin-top:32px;
+}
+
+.howCard{
+  background:linear-gradient(180deg, rgba(14,36,67,.6), rgba(11,27,51,.4));
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:24px 20px;
+  text-align:center;
+}
+
+.howNum{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background:linear-gradient(135deg, rgba(45,212,255,.25), rgba(96,165,250,.20));
+  border:1px solid rgba(45,212,255,.30);
+  font-family:'Fredoka One',cursive;
+  font-size:20px;
+  color:var(--brand);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 14px;
+}
+
+.howCard h3{
+  font-size:15px;
+  font-weight:800;
+  color:var(--text);
+  margin:0 0 8px;
+}
+
+.howCard p{
+  font-size:13px;
+  color:var(--muted);
+  margin:0;
+  line-height:1.5;
+}
+
+@media (max-width: 900px){
+  .hubGrid{
+    grid-template-columns:repeat(2, 1fr);
+  }
+  .howGrid{
+    grid-template-columns:repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px){
+  .hubGrid{
+    grid-template-columns:1fr;
+  }
+  .howGrid{
+    grid-template-columns:1fr;
+  }
+  .hubStats{
+    gap:20px;
+  }
+  .subjectCard{
+    min-height:240px;
+  }
+}
