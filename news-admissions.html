@@ -82,7 +82,7 @@
 
   <link rel="icon" type="image/png" href="assets/img/logo.png">
   <link rel="apple-touch-icon" href="assets/img/logo.png">
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=4" />
 </head>
 <body>
   <header class="topbar">
@@ -101,8 +101,6 @@
           <div class="navDropdownMenu" role="menu">
             <a href="welcome.html" role="menuitem">Principal's Welcome</a>
             <a href="chairs-message.html" role="menuitem">Message from the Chair</a>
-            <a href="meet-the-staff.html" role="menuitem">Meet the Staff</a>
-            <a href="governors.html" role="menuitem">Governors</a>
             <div class="dropdownDivider"></div>
             <a href="about.html#meet-the-team" role="menuitem">Meet the Team</a>
             <a href="about.html#mission" role="menuitem">Our Mission</a>
@@ -111,7 +109,6 @@
           </div>
         </div>
         <a href="curriculum.html">Curriculum</a>
-        <a href="achievements.html">Achievements</a>
         <a href="contact.html">Contact</a>
       </nav>
 
@@ -192,19 +189,17 @@
 
         <!-- View All Facilities Button -->
         <div style="text-align:center;margin-top:32px;">
-          <a class="btn primary" href="about.html#facilities" aria-label="View all facilities at Blue Ink School International">
-            View All Our Facilities →
-          </a>
+          <a class="btn primary" href="about.html#facilities">View All Our Facilities →</a>
         </div>
 
       </div>
     </section>
 
     <!-- Contact Numbers -->
-    <section class="section" aria-labelledby="contact-heading">
+    <section class="section" aria-labelledby="contact-numbers-heading">
       <div class="container">
         <div class="sectionTitle">
-          <h2 id="contact-heading">For More Information</h2>
+          <h2 id="contact-numbers-heading">For More Information</h2>
           <div class="hint">Get in touch — we are happy to help</div>
         </div>
         <p style="max-width:700px;margin-bottom:24px;">
@@ -212,7 +207,7 @@
           All numbers below are also available on WhatsApp.
         </p>
 
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:12px;">
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:700px;margin:0 auto;">
 
           <div class="card" style="text-align:center;">
             <div style="font-size:24px;margin-bottom:8px;">📞</div>
@@ -243,7 +238,6 @@
           </div>
 
         </div>
-
       </div>
     </section>
 
@@ -261,29 +255,31 @@
             <input type="hidden" name="_subject" value="Admissions Enquiry — Blue Ink School International">
 
             <div class="field">
-              <label for="adm-name">Full name</label>
+              <label for="adm-name">Full name <span style="color:#ff6b6b;">*</span></label>
               <input id="adm-name" name="name" type="text" placeholder="e.g. Muhammad Asif" required autocomplete="name" />
             </div>
 
             <div class="field">
-              <label for="adm-email">Email address</label>
+              <label for="adm-email">Email address <span style="color:#ff6b6b;">*</span></label>
               <input id="adm-email" name="email" type="email" placeholder="e.g. parent@email.com" required autocomplete="email" />
             </div>
 
             <div class="field">
-              <label for="adm-phone">Phone number</label>
-              <input id="adm-phone" name="phone" type="tel" placeholder="e.g. +91 98765 43210" autocomplete="tel" />
+              <label for="adm-phone">Phone number <span style="color:#ff6b6b;">*</span></label>
+              <input id="adm-phone" name="phone" type="tel" placeholder="e.g. +91 98765 43210" required autocomplete="tel" />
             </div>
 
             <div class="field">
-              <label for="adm-child">Child's name &amp; class applying for</label>
-              <input id="adm-child" name="child_details" type="text" placeholder="e.g. Aisha Khan — Class 3" />
+              <label for="adm-child">Child's name &amp; class applying for <span style="color:#ff6b6b;">*</span></label>
+              <input id="adm-child" name="child_details" type="text" placeholder="e.g. Aisha Khan — Class 3" required />
             </div>
 
             <div class="field">
-              <label for="adm-message">Your query or message</label>
+              <label for="adm-message">Your query or message <span style="color:#ff6b6b;">*</span></label>
               <textarea id="adm-message" name="message" placeholder="Write your query here and we will get back to you as soon as possible..." required></textarea>
             </div>
+
+            <div id="admFormErrors" style="display:none;margin-bottom:12px;padding:12px 16px;border-radius:12px;background:rgba(255,107,107,.10);border:1px solid rgba(255,107,107,.30);color:#ff6b6b;font-size:14px;"></div>
 
             <button class="btn primary" type="submit" id="admSubmitBtn" style="width:100%;justify-content:center;">Send Enquiry</button>
             <p id="admFormStatus" style="margin-top:12px;text-align:center;" aria-live="polite"></p>
@@ -322,15 +318,35 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script data-cfasync="false" src="assets/js/main.js?v=4"></script>
   <script>
     const admForm = document.getElementById("admissionsForm");
     const admStatus = document.getElementById("admFormStatus");
     const admBtn = document.getElementById("admSubmitBtn");
     const admSuccess = document.getElementById("admSuccessMessage");
+    const admErrors = document.getElementById("admFormErrors");
 
     admForm.addEventListener("submit", async function(e) {
       e.preventDefault();
+
+      // Validate all required fields
+      const required = admForm.querySelectorAll('[required]');
+      const empty = [];
+      required.forEach(function(field) {
+        field.style.borderColor = '';
+        if (!field.value.trim()) {
+          empty.push(field.previousElementSibling ? field.previousElementSibling.textContent.replace('*','').trim() : field.name);
+          field.style.borderColor = 'rgba(255,107,107,.6)';
+        }
+      });
+
+      if (empty.length > 0) {
+        admErrors.style.display = 'block';
+        admErrors.textContent = 'Please fill in all required fields: ' + empty.join(', ');
+        return;
+      }
+
+      admErrors.style.display = 'none';
       admStatus.textContent = "Sending...";
       admSuccess.style.display = "none";
       admBtn.disabled = true;
@@ -345,6 +361,8 @@
           admForm.reset();
           admStatus.textContent = "";
           admSuccess.style.display = "block";
+          // Clear any red borders
+          admForm.querySelectorAll('[required]').forEach(f => f.style.borderColor = '');
         } else {
           admStatus.textContent = "Something went wrong. Please try again.";
         }
@@ -352,6 +370,13 @@
         admStatus.textContent = "There was a problem sending your message. Please try again.";
       }
       admBtn.disabled = false;
+    });
+
+    // Clear red border when user starts typing
+    admForm.querySelectorAll('[required]').forEach(function(field) {
+      field.addEventListener('input', function() {
+        if (field.value.trim()) field.style.borderColor = '';
+      });
     });
   </script>
 </body>
