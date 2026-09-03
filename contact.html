@@ -160,8 +160,8 @@
         <!-- CONTACT FORM -->
         <div class="card">
           <h2 id="contact-heading">Send a Message</h2>
- <form id="admissionsForm" action="https://formspree.io/f/mbdzdzod" method="POST" class="form" novalidate>
-            <input type="hidden" name="_subject" value="Admissions Enquiry — Blue Ink School International">
+ <form id="contactForm" action="https://formspree.io/f/mbdzdzod" method="POST" class="form" novalidate>
+            <input type="hidden" name="_subject" value="New Contact Form Submission — Blue Ink School International">
 
             <div class="field">
               <label for="adm-name">Full name <span style="color:#ff6b6b;">*</span></label>
@@ -188,11 +188,11 @@
               <textarea id="adm-message" name="message" placeholder="Write your query here and we will get back to you as soon as possible..." required></textarea>
             </div>
 
-            <div id="admFormErrors" style="display:none;margin-bottom:12px;padding:12px 16px;border-radius:12px;background:rgba(255,107,107,.10);border:1px solid rgba(255,107,107,.30);color:#ff6b6b;font-size:14px;"></div>
+            <div id="formErrors" style="display:none;margin-bottom:12px;padding:12px 16px;border-radius:12px;background:rgba(255,107,107,.10);border:1px solid rgba(255,107,107,.30);color:#ff6b6b;font-size:14px;"></div>
 
-            <button class="btn primary" type="submit" id="admSubmitBtn" style="width:100%;justify-content:center;">Send Enquiry</button>
-            <p id="admFormStatus" style="margin-top:12px;text-align:center;" aria-live="polite"></p>
-            <div id="admSuccessMessage" style="display:none;margin-top:14px;" class="listItem" role="alert">
+            <button class="btn primary" type="submit" id="submitBtn" style="width:100%;justify-content:center;">Send Enquiry</button>
+            <p id="formStatus" style="margin-top:12px;text-align:center;" aria-live="polite"></p>
+            <div id="successMessage" style="display:none;margin-top:14px;" class="listItem" role="alert">
               Thank you for your enquiry. We will get back to you as soon as possible.
             </div>
           </form>
@@ -216,7 +216,7 @@
             <div class="listItem">
               <b>Email:</b>
               <div style="color:var(--muted);line-height:1.6;">
-                <a href="/cdn-cgi/l/email-protection#9ef7f0f8f1defcf2ebfbf7f0f5edfdf6f1f1f2f7f0eafbecf0ffeaf7f1f0fff2b0f1ecf9"><span class="__cf_email__" data-cfemail="5a33343c351a38362f3f33343129393235353633342e3f28343b2e3335343b367435283d">[email&#160;protected]</span></a>
+                info@blueinkschoolinternational.org
               </div>
             </div>
 
@@ -283,6 +283,7 @@
           <a href="index.html">Home</a> •
           <a href="about.html">About</a> •
           <a href="curriculum.html">Curriculum</a> •
+          <a href="achievements.html">Achievements</a> •
           <a href="contact.html">Contact</a> •
           <a href="latest-news.html">Latest News</a> •
           <a href="careers.html">Careers</a>
@@ -295,7 +296,7 @@
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="assets/js/main.js?v=4"></script>
+  <script data-cfasync="false" src="assets/js/main.js?v=4"></script>
   <script>
     const form = document.getElementById("contactForm");
     const status = document.getElementById("formStatus");
@@ -323,3 +324,59 @@
         if (response.ok) {
           form.reset();
           status.textCon
+  <script>
+    const form = document.getElementById("contactForm");
+    const status = document.getElementById("formStatus");
+    const submitBtn = document.getElementById("submitBtn");
+    const successMessage = document.getElementById("successMessage");
+    const formErrors = document.getElementById("formErrors");
+
+    if (form) {
+      form.addEventListener("submit", async function(e) {
+        e.preventDefault();
+        const required = form.querySelectorAll('[required]');
+        const empty = [];
+        required.forEach(function(field) {
+          field.style.borderColor = '';
+          if (!field.value.trim()) {
+            const label = field.previousElementSibling;
+            empty.push(label ? label.textContent.replace('*','').trim() : field.name);
+            field.style.borderColor = 'rgba(255,107,107,.6)';
+          }
+        });
+        if (empty.length > 0) {
+          formErrors.style.display = 'block';
+          formErrors.textContent = 'Please fill in all required fields: ' + empty.join(', ');
+          return;
+        }
+        formErrors.style.display = 'none';
+        status.textContent = "Sending...";
+        successMessage.style.display = "none";
+        submitBtn.disabled = true;
+        try {
+          const response = await fetch(form.action, {
+            method: "POST", body: new FormData(form),
+            headers: { "Accept": "application/json" }
+          });
+          if (response.ok) {
+            form.reset();
+            status.textContent = "";
+            successMessage.style.display = "block";
+            form.querySelectorAll('[required]').forEach(f => f.style.borderColor = '');
+          } else {
+            status.textContent = "Something went wrong. Please try again.";
+          }
+        } catch(err) {
+          status.textContent = "There was a problem. Please try again.";
+        }
+        submitBtn.disabled = false;
+      });
+      form.querySelectorAll('[required]').forEach(function(field) {
+        field.addEventListener('input', function() {
+          if (field.value.trim()) field.style.borderColor = '';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
